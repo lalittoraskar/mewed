@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ShoppingBag, Star, ArrowLeft, Loader2, Heart } from 'lucide-react';
 import { generateProducts } from '../data/helper';
+import { ProductCarouselPlugin } from './imageCard';
 
 export const ProductCard = ({ product, onClick, isLoading }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -121,18 +122,7 @@ export const ProductDetail = ({ productId, onBack }) => {
                       <Loader2 className="w-12 h-12 text-blue-500 animate-spin" />
                     </div>
                   )} */}
-                  {
-                  product?.images.map(image => {
-                    return(
-                      <img
-                        src={image}
-                        alt={product.name}
-                        className={`w-full h-full object-cover transition-opacity duration-300 opacity-100`}
-                        // onLoad={() => setImageLoaded(true)}
-                      />
-                    )
-                  })
-                  }
+                  <ProductCarouselPlugin images={product.images} name={product.name} />
                   {product.discount > 0 && (
                     <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-lg font-bold">
                       Save {product.discount}%
