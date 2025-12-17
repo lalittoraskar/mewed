@@ -1,5 +1,5 @@
 {
-  "name": "some-project",
+  "name": "newed",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.560.0",
     "moment": "^2.30.1",
